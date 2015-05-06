@@ -1,5 +1,4 @@
-<!DOCTYPE html> 
-
+<%@page session="false" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
@@ -42,7 +41,8 @@
         <petclinic:inputField label="Name" name="name"/>
         <petclinic:inputField label="Birth Date" name="birthDate"/>
         <div class="control-group">
-            <petclinic:selectField name="type" label="Type " names="${types}" size="5"/>
+            <label class="control-label">Type </label>
+            <form:select path="type" items="${types}" size="5"/>
         </div>
         <div class="form-actions">
             <c:choose>

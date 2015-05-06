@@ -1,3 +1,4 @@
+<%@page session="false" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <!--
@@ -14,8 +15,7 @@ PetClinic :: a Spring Framework demonstration
     <spring:url value="/resources/css/petclinic.css" var="petclinicCss"/>
     <link href="${petclinicCss}" rel="stylesheet"/>
 
-    <spring:url value="/webjars/jquery/2.0.3/jquery.js" var="jQuery"/>
-    <script src="${jQuery}"></script>
+    <script src="/petclinic/resources/js/jquery.js"></script>
 
 	<!-- jquery-ui.js file is really big so we only load what we need instead of loading everything -->
     <spring:url value="/webjars/jquery-ui/1.10.3/ui/jquery.ui.core.js" var="jQueryUiCore"/>
@@ -28,5 +28,3 @@ PetClinic :: a Spring Framework demonstration
     <spring:url value="/webjars/jquery-ui/1.10.3/themes/base/jquery-ui.css" var="jQueryUiCss"/>
     <link href="${jQueryUiCss}" rel="stylesheet"></link>
 </head>
-
-

@@ -33,6 +33,8 @@ import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
 import org.springframework.core.style.ToStringCreator;
 
+import com.newrelic.api.agent.NewRelic;
+
 /**
  * Simple JavaBean domain object representing an owner.
  *
@@ -98,6 +100,9 @@ public class Owner extends Person {
 
     public List<Pet> getPets() {
         List<Pet> sortedPets = new ArrayList<Pet>(getPetsInternal());
+		
+		NewRelic.recordMetric("Custom/NumPets", sortedPets.size());
+		
         PropertyComparator.sort(sortedPets, new MutableSortDefinition("name", true, true));
         return Collections.unmodifiableList(sortedPets);
     }
