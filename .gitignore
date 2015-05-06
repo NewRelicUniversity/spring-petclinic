@@ -1,0 +1,10 @@
+src/main/webapp/WEB-INF/lib/*
+target/*
+.settings/*
+.classpath
+.project
+.idea
+*.iml
+*.log
+*.pem
+/target
