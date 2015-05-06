@@ -20,12 +20,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
     </context-param>  -->
 
    <!--  When using Spring Data JPA, uncomment the following: -->
-   <!--
    	<context-param>
         <param-name>spring.profiles.active</param-name>
 		<param-value>spring-data-jpa</param-value>
     </context-param>
-	-->
 
     <!--
 		- Location of the XML file that defines the root application context.
